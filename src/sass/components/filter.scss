@@ -1,0 +1,16 @@
+.filters {
+  box-shadow: 0 2px 4px 0 #dfdfdf;
+  input[type="radio"] {
+    display: none;
+  }
+  label {
+    background-color: lightgreen;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  .years-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
