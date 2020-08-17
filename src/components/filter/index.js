@@ -9,7 +9,7 @@ import {
 import { ToggleButton } from "../core/buttons/ToggleButton";
 import { updateQueryStringParameter } from "../../util/updateQueryParams";
 
-const LAUNCH_VALUES = ["TRUE", "FALSE"];
+const LAUNCH_VALUES = ["true", "false"];
 
 export function FiltersComponent(props) {
   const handleClick = (filterName, event) => {

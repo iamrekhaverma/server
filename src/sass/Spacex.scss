@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Muli", sans-serif !important;
 }
 .row {
   background: #dddd;
@@ -36,6 +35,7 @@
     background-color: red;
   }
   label {
+    text-transform: uppercase;
     cursor: pointer;
     background-color: lightgreen;
     padding: 10px;
