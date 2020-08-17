@@ -1,7 +1,6 @@
 import React from "react";
 
 export const Card = ({ spacex }) => {
-  console.log("333333333333333", spacex);
   return (
     <React.Fragment>
       {spacex.map((item, i) => (
@@ -13,11 +12,24 @@ export const Card = ({ spacex }) => {
             <a href="#">
               {item.mission_name} #{item.flight_number}
             </a>
-            {/* {item.mission_id.map((id) => (
-              <li key={id}>{id}</li>
-            ))} */}
-            <div>{item.launch_year}</div>
-            <div>{item.launch_success ? "True" : "false"}</div>
+            {item.mission_id.length && (
+              <ul>
+                <b>Mission Ids</b>
+                {item.mission_id.map((id) => (
+                  <li key={id}>{id}</li>
+                ))}
+              </ul>
+            )}
+            {item.launch_year && (
+              <div>
+                <b>Launch Year:</b>
+                {item.launch_year}
+              </div>
+            )}
+            <p>
+              <b>Successful Launch:-</b>
+              {item.launch_success ? "True" : "false"}
+            </p>
           </div>
         </div>
       ))}

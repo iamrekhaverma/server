@@ -9,19 +9,10 @@
   padding: 13px;
   overflow-x: hidden;
 }
-.row::after {
-  content: "";
-  clear: both;
-  display: block;
-}
 
 [class*="col-"] {
   float: left;
   padding: 15px;
-}
-
-html {
-  font-family: "Lucida Sans", sans-serif;
 }
 
 .header {
@@ -36,9 +27,16 @@ html {
   }
   background: #ffffff;
   input[type="radio"] {
-    display: none;
+    visibility: hidden;
+  }
+  input:checked + label {
+    background: red;
+  }
+  input:checked {
+    background-color: red;
   }
   label {
+    cursor: pointer;
     background-color: lightgreen;
     padding: 10px;
     border-radius: 6px;
@@ -131,6 +129,15 @@ html {
   .cards {
     display: grid;
     grid-template-columns: repeat(4, 25%);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1022px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
     grid-auto-rows: auto;
     grid-gap: 1rem;
   }

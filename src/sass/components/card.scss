@@ -4,18 +4,7 @@
   justify-self: center;
   .card_image {
     background: #ddd;
-  }
-}
-
-@media (min-width: 40rem) {
-  .cards_item {
-    // width: 50%;
-  }
-}
-
-@media (min-width: 56rem) {
-  .cards_item {
-    // width: 33.3333%;
+    text-align: center;
   }
 }
 
@@ -29,7 +18,9 @@
 }
 
 .card_content {
-  padding: 1rem;
+  margin: 16px 0px;
+  line-height: 1.5rem;
+  letter-spacing: 0px;
 }
 
 .card_title {

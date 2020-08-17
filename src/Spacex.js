@@ -24,10 +24,11 @@ class Spacex extends React.Component {
     }
   }
   render() {
+    const { history } = this.props;
     return (
       <div className="row">
         <Header />
-        <FiltersComponent />
+        <FiltersComponent history={history} />
         <div className="col-10 cards">
           <Card spacex={this.state.spacex} />
         </div>

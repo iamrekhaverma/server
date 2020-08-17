@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Switch } from "react-router-dom";
+import { Switch, BrowserRouter } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import { Router } from "react-router";
+import { Router, StaticRouter } from "react-router";
 import Spacex from "./Spacex";
 import "./sass/main.scss";
 
@@ -22,7 +22,17 @@ class App extends React.Component {
 }
 
 if (!document.getElementById("app").childNodes.length) {
-  ReactDOM.render(<App />, document.getElementById("app"));
+  ReactDOM.render(
+    <StaticRouter>
+      <App />
+    </StaticRouter>,
+    document.getElementById("app")
+  );
 } else {
-  ReactDOM.hydrate(<App />, document.getElementById("app"));
+  ReactDOM.hydrate(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+    document.getElementById("app")
+  );
 }

@@ -1,10 +1,10 @@
 import React from "react";
 
-export const ToggleButton = ({ title, className }) => {
+export const ToggleButton = ({ title, className, id }) => {
   return (
     <div className={className}>
-      <input type="radio" name={title} checked />
-      <label htmlFor={title}>{title}</label>
+      <input type="radio" name="radio" id={id} value={title} />
+      <label htmlFor={id}>{title}</label>
     </div>
   );
 };
