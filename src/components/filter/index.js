@@ -31,48 +31,45 @@ export function FiltersComponent(props) {
     <div className="col-2 menu">
       <div className="launch_year">
         <TextHeader title={LAUNCH_YEAR} />
-        <div
-          className="flex-container"
-          onClick={(event) => handleClick("launch_year", event)}
-        >
+        <div className="flex-container">
           {LAUNCH_YEARS.map((year) => (
             <ToggleButton
               className="grid-item"
               id={year}
               key={year}
               title={year}
+              filter="launch_year"
+              onChange={(event) => handleClick("launch_year", event)}
             />
           ))}
         </div>
       </div>
       <div className="success_launch">
         <TextHeader title={SUCCESSFULL_LAUNCHING} />
-        <div
-          className="flex-container"
-          onClick={(event) => handleClick("launch_success", event)}
-        >
+        <div className="flex-container">
           {LAUNCH_VALUES.map((value) => (
             <ToggleButton
               key={value}
               className="grid-item"
               id={`launch_${value}`}
               title={value}
+              filter="launch_success"
+              onChange={(event) => handleClick("launch_success", event)}
             />
           ))}
         </div>
       </div>
       <div className="success_landing">
         <TextHeader title={SUCCESSFULL_LANDING} />
-        <div
-          className="flex-container"
-          onClick={(event) => handleClick("land_success", event)}
-        >
+        <div className="flex-container">
           {LAUNCH_VALUES.map((value) => (
             <ToggleButton
               key={value}
               className="grid-item"
               id={`landing_${value}`}
               title={value}
+              filter="land_success"
+              onChange={(event) => handleClick("land_success", event)}
             />
           ))}
         </div>

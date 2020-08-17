@@ -1,6 +1,7 @@
 import React from "react";
 
 export const Card = ({ spacex }) => {
+  console.log("spacex", spacex);
   return (
     <React.Fragment>
       {spacex.map((item, i) => (
