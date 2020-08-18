@@ -31,7 +31,7 @@ export function FiltersComponent(props) {
     <div className="col-2 menu">
       <div className="launch_year">
         <TextHeader title={LAUNCH_YEAR} />
-        <div className="flex-container">
+        <div className="grid-container">
           {LAUNCH_YEARS.map((year) => (
             <ToggleButton
               className="grid-item"
@@ -46,7 +46,7 @@ export function FiltersComponent(props) {
       </div>
       <div className="success_launch">
         <TextHeader title={SUCCESSFULL_LAUNCHING} />
-        <div className="flex-container">
+        <div className="grid-container">
           {LAUNCH_VALUES.map((value) => (
             <ToggleButton
               key={value}
@@ -61,7 +61,7 @@ export function FiltersComponent(props) {
       </div>
       <div className="success_landing">
         <TextHeader title={SUCCESSFULL_LANDING} />
-        <div className="flex-container">
+        <div className="grid-container">
           {LAUNCH_VALUES.map((value) => (
             <ToggleButton
               key={value}

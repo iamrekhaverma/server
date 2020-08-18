@@ -40,13 +40,15 @@ class Spacex extends React.Component {
     return (
       <div className="row">
         <Header />
-        <FiltersComponent history={history} />
-        <div className="col-10 cards">
+        <div className="cards-container">
+          <FiltersComponent history={history} />
           {spacex && spacex.length > 0 ? (
-            <Card spacex={spacex} />
+            <div className="col-10 cards">
+              <Card spacex={spacex} />
+            </div>
           ) : (
-            <div>Nothing found</div>
-          )}
+              <div className="nothing-found">Nothing found</div>
+            )}
         </div>
         <Footer devName="Rekha" />
       </div>
